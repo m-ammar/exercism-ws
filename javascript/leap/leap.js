@@ -3,16 +3,29 @@
 // convenience to get you started writing code faster.
 //
 
-var Year = function () {
-//
-// YOUR CODE GOES HERE
-//
+var Year = function (yearVal) {
+    this.yearVal = yearVal;
 };
 
 Year.prototype.isLeap = function () {
-//
-// YOUR CODE GOES HERE
-//
+
+    if (this.yearVal%4 === 0) {
+        if (this.yearVal%100 === 0) {
+            if (this.yearVal%400 === 0) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        else {
+            return true;
+        }
+    }
+    else {
+        return false;
+    }
+
 };
 
 module.exports = Year;
